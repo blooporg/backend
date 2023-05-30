@@ -10,10 +10,10 @@ Bloop empowers readers with direct access to their favorite books and the author
 
 This repository contains the backend code for Bloop, developed using Go. The backend is responsible for the business logic, data storage, and server-side functionalities. Here, you'll find:
 
-**Server code:** The Go code responsible for creating server endpoints, handling requests, and interacting with databases.
-**Database Models & Migrations:** Definitions of data structures, relationships, and database migration files.
-**Tests:** Unit and integration tests to verify the correctness of the backend logic and data handling.
-**Documentation:** Detailed information on using and contributing to the Bloop backend code.
+- **Server code:** The Go code responsible for creating server endpoints, handling requests, and interacting with databases.
+- **Database Models & Migrations:** Definitions of data structures, relationships, and database migration files.
+- **Tests:** Unit and integration tests to verify the correctness of the backend logic and data handling.
+- **Documentation:** Detailed information on using and contributing to the Bloop backend code.
 
 ## **Getting Started**
 
