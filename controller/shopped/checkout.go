@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
-func Checkout(w http.ResponseWriter, r *http.Request) {
+func Checkout(w http.ResponseWriter, r *http.Request) error {
 	fmt.Fprintf(w, "<h1> Checkout Page!!</h1>")
+	return nil
 }

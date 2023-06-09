@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
-func Loops(w http.ResponseWriter, r *http.Request) {
+func Loops(w http.ResponseWriter, r *http.Request) error {
 	fmt.Fprintf(w, "<h1> Loops Page!! </h1>")
+	return nil
 }
