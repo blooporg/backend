@@ -1,11 +1,11 @@
 package loops
 
 import (
-	"fmt"
 	"net/http"
+
+	"github.com/ibilalkayy/backend/controller/templates"
 )
 
 func Loops(w http.ResponseWriter, r *http.Request) error {
-	fmt.Fprintf(w, "<h1> Loops Page!! </h1>")
-	return nil
+	return templates.LoopsTmpl.Execute(w, nil)
 }

@@ -1,11 +1,11 @@
 package shopped
 
 import (
-	"fmt"
 	"net/http"
+
+	"github.com/ibilalkayy/backend/controller/templates"
 )
 
 func Checkout(w http.ResponseWriter, r *http.Request) error {
-	fmt.Fprintf(w, "<h1> Checkout Page!!</h1>")
-	return nil
+	return templates.CheckoutTmpl.Execute(w, nil)
 }

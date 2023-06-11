@@ -1,11 +1,11 @@
 package billing
 
 import (
-	"fmt"
 	"net/http"
+
+	"github.com/ibilalkayy/backend/controller/templates"
 )
 
 func BillingInfo(w http.ResponseWriter, r *http.Request) error {
-	fmt.Fprintf(w, "<h1> Billing Info Page!!</h1>")
-	return nil
+	return templates.BillingInfoTmpl.Execute(w, nil)
 }

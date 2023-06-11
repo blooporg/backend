@@ -1,11 +1,11 @@
 package books
 
 import (
-	"fmt"
 	"net/http"
+
+	"github.com/ibilalkayy/backend/controller/templates"
 )
 
 func Books(w http.ResponseWriter, r *http.Request) error {
-	fmt.Fprintf(w, "<h1> Books Page!!</h1>")
-	return nil
+	return templates.BooksTmpl.Execute(w, nil)
 }
