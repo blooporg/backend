@@ -2,11 +2,13 @@ package controller
 
 import (
 	"net/http"
+
+	"github.com/ibilalkayy/backend/controller/templates"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) error {
 	if r.URL.Path != "/" {
-		return PageError.Execute(w, r)
+		return templates.PageError.Execute(w, r)
 	}
-	return IndexTmpl.Execute(w, nil)
+	return templates.IndexTmpl.Execute(w, nil)
 }

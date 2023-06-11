@@ -3,9 +3,9 @@ package account
 import (
 	"net/http"
 
-	"github.com/ibilalkayy/backend/controller"
+	"github.com/ibilalkayy/backend/controller/templates"
 )
 
 func AccountPage(w http.ResponseWriter, r *http.Request) error {
-	return controller.AccountTmpl.Execute(w, nil)
+	return templates.AccountTmpl.Execute(w, nil)
 }
