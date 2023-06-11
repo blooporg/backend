@@ -5,6 +5,8 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) error {
-	IndexTmpl.Execute(w, nil)
-	return nil
+	if r.URL.Path != "/" {
+		return PageError.Execute(w, r)
+	}
+	return IndexTmpl.Execute(w, nil)
 }

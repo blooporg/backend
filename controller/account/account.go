@@ -1,11 +1,11 @@
 package account
 
 import (
-	"fmt"
 	"net/http"
+
+	"github.com/ibilalkayy/backend/controller"
 )
 
 func AccountPage(w http.ResponseWriter, r *http.Request) error {
-	fmt.Fprintf(w, "<h1> Account Page!!</h1>")
-	return nil
+	return controller.AccountTmpl.Execute(w, nil)
 }
