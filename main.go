@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ibilalkayy/backend/api"
+	"github.com/ibilalkayy/Bloop/backend/api"
 )
 
 func Execute() error {

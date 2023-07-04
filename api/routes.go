@@ -3,7 +3,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ibilalkayy/backend/handlers"
+	"github.com/ibilalkayy/Bloop/backend/handlers"
 )
 
 func SetupRoutes() {
