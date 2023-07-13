@@ -1,10 +1,15 @@
 package handlers
 
 import (
-	"fmt"
+	"log"
 	"net/http"
+
+	"github.com/ibilalkayy/Bloop/backend/templates"
 )
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<b>Home Page</b>")
+	err := templates.HomeTmpl.Execute(w, nil)
+	if err != nil {
+		log.Fatal()
+	}
 }

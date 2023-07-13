@@ -1,10 +1,15 @@
 package handlers
 
 import (
-	"fmt"
+	"log"
 	"net/http"
+
+	"github.com/ibilalkayy/Bloop/backend/templates"
 )
 
 func LoopsPage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<b>Loops Page</b>")
+	err := templates.LoopsTmpl.Execute(w, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
