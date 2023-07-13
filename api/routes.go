@@ -7,6 +7,14 @@ import (
 )
 
 func SetupRoutes() {
+	// http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	// 	http.ServeFile(w, r, "../frontend/html/home.html")
+	// })
+
+	// http.HandleFunc("/loops", func(w http.ResponseWriter, r *http.Request) {
+	// 	http.ServeFile(w, r, "../frontend/html/loops.html")
+	// })
+
 	http.HandleFunc("/", handlers.HomePage)
 	http.HandleFunc("/loops", handlers.LoopsPage)
 	http.HandleFunc("/signup", handlers.SignupPage)
@@ -22,4 +30,6 @@ func SetupRoutes() {
 	http.HandleFunc("/checkout", handlers.CheckoutPage)
 	http.HandleFunc("/pricing", handlers.PricingPage)
 	http.HandleFunc("/authors-signup", handlers.AuthorsSignupPage)
+
+	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("../frontend/pages"))))
 }
